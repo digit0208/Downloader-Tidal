@@ -100,11 +100,11 @@ class Settings(ModelBase):
 
     @staticmethod
     def getDefaultAlbumFolderFormat():
-        return R"{ArtistName}/{Flag} {AlbumTitle} [{AlbumID}] [{AlbumYear}]"
+        return R"{ArtistName}/{AlbumTitle} {Flag} {AlbumYear}"
 
     @staticmethod
     def getDefaultTrackFileFormat():
-        return R"{TrackNumber} - {ArtistName} - {TrackTitle}{ExplicitFlag}"
+        return R"{TrackNumber} - {ArtistName} - {TrackTitle}"
 
     @staticmethod
     def read():
