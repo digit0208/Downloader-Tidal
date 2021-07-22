@@ -75,13 +75,13 @@ class TokenSettings(ModelBase):
 
 
 class Settings(ModelBase):
-    addLyrics = False
+    addLyrics = True
     lyricsServerProxy = ''
     downloadPath = "/content/drive/MyDrive/Source Tidal"
     onlyM4a = False
     addExplicitTag = True
     addHyphen = True
-    addYear = False
+    addYear = True
     useTrackNumber = True
     audioQuality = AudioQuality.High
     videoQuality = VideoQuality.P1080
@@ -93,14 +93,14 @@ class Settings(ModelBase):
     language = 0
     usePlaylistFolder = True
     multiThreadDownload = True
-    albumFolderFormat = R"{ArtistName}/{AlbumTitle} {Flag} {AlbumYear}"
+    albumFolderFormat = R"{ArtistName}/{AlbumTitle} {AlbumYear} {Flag}"
     trackFileFormat = R"{TrackNumber} - {ArtistName} - {TrackTitle}"
     showProgress = True
     saveAlbumInfo = False
 
     @staticmethod
     def getDefaultAlbumFolderFormat():
-        return R"{ArtistName}/{AlbumTitle} {Flag} {AlbumYear}"
+        return R"{ArtistName}/{AlbumTitle} {AlbumYear} {Flag}"
 
     @staticmethod
     def getDefaultTrackFileFormat():
