@@ -140,14 +140,14 @@ class Settings(ModelBase):
         for item in AudioQuality:
             if item.name == value:
                 return item
-        return AudioQuality.Normal
+        return AudioQuality.High
 
     @staticmethod
     def getVideoQuality(value):
         for item in VideoQuality:
             if item.name == value:
                 return item
-        return VideoQuality.P360
+        return VideoQuality.P1080
     
     @staticmethod
     def __getFilePath__():
